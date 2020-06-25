@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info Lookup Order</title>
+    <!-- Load Bootstrap 4, JQuery-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Load custom Javascript and CSS-->
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        let facebookAppId = "<%= facebookAppId %>"
+    </script>
+    <script src="/js/order.js"></script>
+
+</head>
+<body>
+<div class="container fix-height">
+    <div class="row">
+        <div class="col-12">
+            <div class="text-center mt-3">
+                <span class="title">Order lookup</span>
+            </div>
+            <input type="text" id="psid" hidden>
+            <div class="form-group">
+                <label for="customerName">Customer:</label>
+                <input type="text" id="customerName" class="form-control" placeholder="Name...">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address (<span style="color: red">*</span>):</label>
+                <input type="email" id="email" class="form-control" placeholder="Email address...">
+                <div class="invalid-feedback">Please fill out your email address.</div>
+            </div>
+            <div class="form-group">
+                <label for="orderNumber">Order number (<span style="color: red">*</span>):</label>
+                <input type="text" id="orderNumber" class="form-control" placeholder="Order number...">
+                <div class="invalid-feedback">Please fill out your order number.</div>
+            </div>
+            <button class="btn btn-primary" id="btnFindOrder"> FIND ORDER </button>
+        </div>
+
+    </div>
+
+</div>
+<footer>
+    <div class="text-center">
+        <div class="">
+            <span class="mr-3">	&copy; Chatbot Tutorial</span>
+            <span class="ml-3">
+                Powered by <a href="https://bit.ly/subscribe-haryphamdev" target="_blank">HaryPhamDev</a>
+            </span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
