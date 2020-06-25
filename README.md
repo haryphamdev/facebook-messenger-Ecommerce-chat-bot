@@ -1,18 +1,14 @@
-# facebook-messenger-restaurant-chat-bot
+# facebook-messenger-Ecommerce-chat-bot
 A  restaurant chatbot uses Facebook Messenger Platform, building from scratch with Node.js Platform.
 
 ## Video demo the bot: https://youtu.be/sLdrrZLxIgU
 
-- Feel free to test my bot👉:  https://m.me/restaurantHaryPhamDev
-- The Facebook Page I embed that bot: https://www.facebook.com/restaurantHaryPhamDev
+- Feel free to test my bot👉:  m.me/techShopHaryphamdev
+- The Facebook Page I embed that bot: https://www.facebook.com/techShopHaryphamdev
 
 ## What can this bot do:
 
-- Showing menu (lunch, dinner, pub menu), showing rooms.
-- Take a reservation.
-- Call the phone number, persistent menu (link to view Facebook Fan Page,  Youtube channel).
-- Automatic understand a message is a datetime or a phone number (use for taking reservation).
-- Whenever a reservation is done, a message notification will be automatically push to a group Telegram.
+- 
 
 ### How to setup this bot for your own Facebook Page without any cost ?
 
