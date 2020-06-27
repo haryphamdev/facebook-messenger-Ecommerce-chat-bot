@@ -1,7 +1,7 @@
 # facebook-messenger-Ecommerce-chat-bot
 An online store chatbot uses Facebook Messenger Platform, building from scratch with Node.js Platform.
 
-## Video demo the bot: https://youtu.be/sLdrrZLxIgU
+## Video demo the bot: https://youtu.be/4zkR4nzmqA4
 
 - Feel free to test my bot👉:  https://m.me/techShopHaryphamdev
 - The Facebook Page I embed that bot: https://www.facebook.com/techShopHaryphamdev
