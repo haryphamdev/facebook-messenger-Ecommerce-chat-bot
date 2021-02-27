@@ -6,7 +6,10 @@ import templateMessage from "../services/templateMessage";
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
 let getHomePage = (req, res) => {
-    return res.render("homepage.ejs")
+    let facebookAppId = process.env.FACEBOOK_APP_ID;
+    return res.render("homepage.ejs", {
+        facebookAppId: facebookAppId
+    })
 };
 
 let getWebhook = (req, res) => {
@@ -42,12 +45,12 @@ let postWebhook = (req, res) => {
     if (body.object === 'page') {
 
         // Iterates over each entry - there may be multiple if batched
-        body.entry.forEach(function(entry) {
+        body.entry.forEach(function (entry) {
             //check the incoming message from primary app or not; if secondary app, exit
             if (entry.standby) {
                 //if user's message is "back" or "exit", return the conversation to the bot
                 let webhook_standby = entry.standby[0];
-                if(webhook_standby && webhook_standby.message){
+                if (webhook_standby && webhook_standby.message) {
                     if (webhook_standby.message.text === "back" || webhook_standby.message.text === "exit") {
                         // call function to return the conversation to the primary app
                         // chatbotService.passThreadControl(webhook_standby.sender.id, "primary");
@@ -118,7 +121,7 @@ let handleMessage = async (sender_psid, received_message) => {
                 "type": "template",
                 "payload": {
                     "template_type": "generic",
-                    "elements": [ {
+                    "elements": [{
                         "title": "Is this the right picture?",
                         "subtitle": "Tap a button to answer.",
                         "image_url": attachment_url,
@@ -134,7 +137,7 @@ let handleMessage = async (sender_psid, received_message) => {
                                 "payload": "no",
                             }
                         ],
-                    } ]
+                    }]
                 }
             }
         }

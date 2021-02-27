@@ -1,1 +1,76 @@
-<h1>hello world</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TechShop Chatbot with Messenger</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="mt-3">
+                    Test my bot on Messenger (alway works): 👉 <a target="_blank"
+                        href="http://m.me/techShopHaryphamdev">m.me/techShopHaryphamdev</a>
+                </div>
+                <br />
+
+                <div>
+                    <span style="color: red">For more information, please visit my youtube channel (or facebook page) to
+                        watch awesome videos to build amazing bots.</span><br />
+                    Youtube channel: 👉 <a title="Click here to visit my youtube channel"
+                        href="https://www.youtube.com/channel/UCHqJxLo7mKam9GKqqwr2wfA?sub_confirmation=1"
+                        target="_blank">Click here</a><br />
+                    Facebook page: 👉 <a title="Click here to visit my facebook page"
+                        href="https:facebook.com/haryphamdev" target="_blank">Click here</a><br />
+                </div>
+
+                <div class="mt-3">
+                    <b>Video demo how this bot works:</b>
+                    <div class="mt-2">
+                        <iframe width="853" height="480" src="https://www.youtube.com/embed/WtFBryUmM0A" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Load Facebook SDK for JavaScript --- Facebook Chat Plugin -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v6.0'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="<%= facebookAppId %>">
+    </div>
+    </div>
+</body>
+
+</html>
