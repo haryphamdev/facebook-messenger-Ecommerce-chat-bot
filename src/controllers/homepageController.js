@@ -50,9 +50,9 @@ let postWebhook = (req, res) => {
         let entryArr = body.entry ? body.entry : [];
 
         for (let i = 0; i <= entryArr.length; i++) {
-            console.log('----------------------')
+            console.log('----------------------page')
             console.log(entryArr[i])
-            console.log('----------------------')
+            console.log('----------------------page')
 
         }
         // Iterates over each entry - there may be multiple if batched
